@@ -14,6 +14,14 @@
 
 
 (* ::Section:: *)
+(*Package path*)
+
+
+If[Not[ValueQ[$FeynRulesPath]],
+   $FeynRulesPath = DirectoryName[ExpandFileName[$InputFileName]]];
+
+
+(* ::Section:: *)
 (*Compatibility with Mathematica 12.2*)
 
 
