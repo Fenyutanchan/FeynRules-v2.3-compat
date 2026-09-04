@@ -4,6 +4,10 @@
 (*The FeynRules package*)
 
 
+(* Wolfram 15 defines a protected System`MatrixSymbol, so create the public symbol before BeginPackage resolves names. *)
+FeynRules`MatrixSymbol::usage="Get the symbol used for a mixing matrix";
+
+
 (* ::Section:: *)
 (*Some printout*)
 
@@ -1280,8 +1284,6 @@ FR$MassMatrices::usage="List with the mass matrix names";
 
 MassMatrix::usage="Convert a mass matrix name ot the corresponding analytical matrix";
 
-MatrixSymbol::usage="Get the symbol used for a mixing matrix";
-
 MixMatrix::usage="Get the predefined value of a mixing matrix";
 
 Mix::usage="Tag for a mixing relation.";
@@ -1939,6 +1941,4 @@ Protect[LoadModel, FeynmanRules, ReadAll, FlavorExpand, MaxParticles, MinParticl
         MinCanonicalDimension, MaxCanonicalDimension, TeXOutput, WriteMGOutput, WriteSHOutput, WriteCHOutput, WriteFeynArtsOutput, ConservedQuantumNumbers, MASS, DECAY, 
         ZERO, NoUnfold, FRBlock, NoValue, NoPDG, NoBlockName, PutIndices, PrePutIndices, GetFieldContent, PrintLagrangian, FR$VersionNumber,FR$VersionDate,GenericFile,DiracIndices, 
         Sextet,FieldExpand,FR$FExpand]
-
-
 
